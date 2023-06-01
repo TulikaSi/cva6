@@ -561,6 +561,11 @@ module csr_regfile import ariane_pkg::*; #(
                     end
                     mstatus_d.upie = 1'b0;
                     mstatus_d.uie  = 1'b0;
+                    mstatus_d.wpri0 = 1'b0;
+                    mstatus_d.wpri1 = 1'b0;
+                    mstatus_d.wpri1 = 1'b0;
+                    mstatus_d.wpri2 = '0;
+                    mstatus_d.wpri3 = '0;
                     // this register has side-effects on other registers, flush the pipeline
                     flush_o        = 1'b1;
                 end
